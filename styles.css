@@ -68,6 +68,12 @@ footer {
     width: 100%;
 }
 
+.image-class {
+    width: 300px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* This will ensure the image covers the area nicely */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     header nav ul {
