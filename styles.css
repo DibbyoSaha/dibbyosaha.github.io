@@ -1,7 +1,5 @@
-/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +17,6 @@ body, html {
     overflow-x: hidden;
 }
 
-/* Header styles */
 header {
     background: #333;
     color: #fff;
@@ -51,13 +48,11 @@ header nav ul li a:hover {
     color: #1abc9c;
 }
 
-/* Main content styles */
 section {
     padding: 60px 0;
     text-align: center;
 }
 
-/* Footer styles */
 footer {
     background: #333;
     color: #fff;
@@ -74,7 +69,6 @@ footer {
     object-fit: cover; 
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     header nav ul {
         flex-direction: column;
