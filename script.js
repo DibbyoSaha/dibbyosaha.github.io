@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    // Smooth scrolling using jQuery easing
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
