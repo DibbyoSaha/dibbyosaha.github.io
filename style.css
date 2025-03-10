@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    background-color: #0b1120;
+    /* Ensure consistent background */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --text-color: #fff;
+    --blue-color: #00aaff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.Home {
+    min-height: 100vh;
+    background-image: url(./background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    color: var(--text-color);
+    font-size: 2.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10rem;
+    animation: to_bottom 1s ease forwards;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .3s;
+    margin-left: 6rem;
+}
+
+header nav a:hover,
+header nav .active {
+    color: var(--blue-color);
+}
+
+.content-box {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 8rem;
+    z-index: 3;
+}
+
+.text-box h1 {
+    font-size: 4.6rem;
+    font-weight: 300;
+    text-align: justify;
+    animation: to_left 1s ease forwards;
+}
+
+.text-box h1:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.text-box .skills {
+    color: var(--blue-color);
+    opacity: 1;
+}
+
+.text-box p {
+    margin: 2.5rem 0;
+    text-align: justify;
+    font-size: 1.4rem;
+    animation: to_left 1s ease forwards .2s;
+}
+
+.content-box .item-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-right: 3rem;
+    animation: to_right 1s ease forwards .5s;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.content-box .icon-box i {
+    color: var(--blue-color);
+    padding: .7rem;
+    font-size: 2.6rem;
+    cursor: pointer;
+    border: .2rem solid var(--blue-color);
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.content-box .icon-box i:hover {
+    color: var(--text-color);
+    background-color: var(--blue-color);
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+
+.text-box .btn {
+    color: var(--text-color);
+    padding: .8rem 2.8rem;
+    border: .2rem solid var(--blue-color);
+    background-color: var(--blue-color);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: .2s;
+    animation: to_left 1s ease forwards 0.2s;
+}
+
+.text-box .btn:hover {
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+
+.img {
+    width: 30%;
+    border: .5rem solid var(--text-color);
+    border-radius: 50%;
+    box-shadow: 1rem 1rem 5rem var(--blue-color);
+    background-color: var(--blue-color);
+    margin-right: 8rem;
+    transform: scale(0);
+    animation: scale_img 1s ease forwards 0.5s;
+}
+
+.text-box * {
+    opacity: 0;
+}
+
+.social-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.15rem solid transparent;
+    /* Thin border */
+    background-color: transparent;
+    /* Transparent fill */
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+    /* Inherit brand color for icons */
+    font-size: 2rem;
+    /* Adjust icon size if needed */
+}
+
+/* Brand-specific border and icon colors */
+.linkedin {
+    border-color: #0077b5;
+    /* LinkedIn blue border */
+    color: #0077b5;
+    /* LinkedIn blue icon */
+}
+
+.github {
+    border-color: #333;
+    /* GitHub grey border */
+    color: #333;
+    /* GitHub grey icon */
+}
+
+.goodreads {
+    border-color: #553b08;
+    /* Goodreads brown border */
+    color: #553b08;
+    /* Goodreads brown icon */
+}
+
+/* Hover effect: Fill background with brand color and make icon white */
+.linkedin:hover,
+.github:hover,
+.goodreads:hover {
+    background-color: transparent;
+    /* Keep transparent on hover */
+    color: #fff;
+    /* Make icon white on hover */
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Align icons vertically with spacing */
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+.content-box p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    /* Align text neatly */
+    line-height: 1.8;
+    /* Improve readability */
+}
+
+/* Text size for work experiences to match about page */
+.content-box .text-box h1 {
+    font-size: 2.4rem;
+    /* Smaller heading size */
+    margin-bottom: 1rem;
+    color: var(--blue-color);
+    text-align: justify;
+}
+
+.content-box .text-box p {
+    font-size: 1.6rem;
+    /* Match about page paragraph size */
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+
+}
+
+@keyframes to_bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-8rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes to_left {
+    0% {
+        opacity: 0;
+        transform: translateX(8rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes to_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale_img {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.experience-text {
+    font-size: 1.1rem;
+    /* Slightly smaller text for better fit */
+    line-height: 1.8;
+    text-align: justify;
+    padding: 25px;
+    /* Increased padding for better readability */
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* Rounded corners for a cleaner look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Smooth transition for appearance */
+    max-width: 90%;
+    /* Ensure text fits well within the container */
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(20px);
+    /* Initial slide-up effect */
+    opacity: 0;
+    /* Initially hidden */
+}
+
+.experience-text.active {
+    display: block;
+    opacity: 1;
+    /* Fade-in effect */
+    transform: translateY(0);
+    /* Slide-up effect */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Smooth transition */
+}
+
+.experience-text:not(.active) {
+    display: none;
+    opacity: 0;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}

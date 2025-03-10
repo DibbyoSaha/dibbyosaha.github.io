@@ -1,30 +1,69 @@
-$(document).ready(function(){
-    $('a[href*="#"]')
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function(event) {
-            if (
-                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-                && 
-                location.hostname == this.hostname
-            ) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000, function() {
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) {
-                            return false;
-                        } else {
-                            $target.attr('tabindex','-1');
-                            $target.focus();
-                        };
-                    });
-                }
+const skillsElement = document.querySelector('.skills');
+if (skillsElement) {
+    var typed = new Typed(skillsElement, {
+        strings: ['Developer', 'Tester', 'Bookworm'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const isWorkExperiencesPage = window.location.pathname.includes("work-experiences.html");
+    const isProjectsPage = window.location.pathname.includes("projects.html");
+
+    if (isWorkExperiencesPage) {
+        const buttons = document.querySelectorAll('.icon-box a.social-icon');
+        const sections = document.querySelectorAll('.experience-text');
+
+        function showSection(target) {
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const targetSection = document.getElementById(target);
+            if (targetSection) {
+                targetSection.classList.add('active');
             }
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = button.dataset.target;
+                showSection(target);
+            });
         });
+
+        // Show only the default section initially
+        showSection('mccss');
+    }
+
+    if (isProjectsPage) {
+        const projectButtons = document.querySelectorAll('.icon-box a.social-icon');
+        const projectSections = document.querySelectorAll('.experience-text');
+
+        function showProjectSection(target) {
+            projectSections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const targetProject = document.getElementById(target);
+            if (targetProject) {
+                targetProject.classList.add('active');
+            }
+        }
+
+        projectButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = button.getAttribute('href').substring(1);
+                showProjectSection(target);
+            });
+        });
+
+        // Show only the default project section initially
+        showProjectSection('mccss');
+    }
 });

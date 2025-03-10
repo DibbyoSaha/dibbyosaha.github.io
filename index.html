@@ -3,152 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibbyo Saha's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js" defer></script>
+    <title>Dibbyo Saha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
+        <h1></h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="work-experiences.html">Work Experiences</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-    
-    <section id="home">
-        <h1>Welcome to the World of Dibbyo Saha</h1>
-        <p>
-            
-            A Blend of Innovation, Expertise, and Passion in Software Engineering
-            
-        </p>
-        
+    <section class="Home">
+        <div class="content-box">
+            <div class="icon-box">
+                <a href="https://www.linkedin.com/in/dibbyosaha/" class="social-icon linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i> <!-- Font Awesome LinkedIn icon -->
+                </a>
+                <a href="https://github.com/DibbyoSaha" class="social-icon github" target="_blank">
+                    <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
+                </a>
+                <a href="https://www.goodreads.com/user/show/20217929-dibbyo-saha" class="social-icon goodreads" target="_blank">
+                    <i class="fab fa-goodreads-g"></i> <!-- Font Awesome Goodreads icon -->
+                </a>
+            </div>
+            <div class="text-box">
+                <h1>Hi! I'm Dibbyo Saha</h1>
+                <h1>
+                    and I'm a
+                    <span class="skills">Software Engineer</span>
+                </h1>
+                <p>with a passion for building scalable, high-quality applications that solve real-world problems.</p>
+                <button type="button" class="btn">Download Resume</button>
+            </div>
+        </div>
+        <img src="./image.jpg" class="img" alt="">
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            
-            As a passionate software engineer, I specialize in developing innovative solutions that bridge the gap between technology and user needs. <br>
-            With a strong foundation in computer science and a flair for creative problem solving, I am dedicated to delivering excellence in every line of code. <br>
-        
-        </p>
-        <img src="about.jpg" alt="About Me" class="image-class"> <br>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div>
-            <h3>Software Engineer Intern - TD Securities</h3>
-            <p>
-                
-                Developed advanced dashboards to streamline trading operations, implemented thread optimization techniques to enhance system performance, and automated key processes resulting in a in manual workload. <br>
-            
-            </p>
-            <!-- Placeholder for an image or graphic related to Professional Experience -->
-            <img src="experience.jpg" alt="Professional Experience" class="image-class"> <br>
-        </div>
-        <div>
-            <h3>Software Engineer Intern - TD Canada Trust</h3>
-            <p>
-                
-                Contributed to the development of comprehensive technical documentation and played a key role in the onboarding process for new software architects, improving team integration. <br>
-            
-            </p>
-        </div>
-        <div>
-            <h3>Vice President of Marketing - TMACC, Toronto Metropolitan University</h3>
-            <p>
-                
-                Directed the marketing strategy for the university's premier tech club, fostering a community of tech enthusiasts and spearheading the organization of flagship programming contests and tech talks. <br>
-            
-            </p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div>
-            <h3>TourDrone Web Application</h3>
-            <p>
-                
-                Designed and developed a web application to provide virtual tours using drone technology, enhancing the user experience with interactive maps and real-time flight data. <br>
-            
-            </p>
-            <img src="tourdrone.jpg" alt="TourDrone Web Application" class="image-class"> <br>
-        </div>
-        <div>
-            <h3>Breast Cancer Classifier</h3>
-            <p>
-                
-                Engaged with the esteemed Breast Cancer Wisconsin Data Set with a mission to design a top-tier classifier targeting early detection of breast cancer malignancies. <br>
-                Executed rigorous dataset exploration, uncovering vital data patterns, correlations, and potential outliers that informed the subsequent stages of the project. <br>
-                Masterfully employed Matplotlib to craft insightful visualizations of data distributions, achieving a holistic understanding of the interplay between diverse features. Harnessing the power of TensorFlow, conceived and trained a sophisticated deep learning model, resulting in a classifier with standout accuracy metrics. <br>
-            
-            </p>
-            <img src="bcancer.jpg" alt="Breast Cancer Classifier" class="image-class"> <br>
-        </div>        
-        <div>
-            <h3>Hardware Rental Store App</h3>
-            <p>
-                
-                Engineered a dynamic application using JavaScript, enabling users to search and rent hardware items, with each user action triggering specific SQL database queries. <br>
-                Designed comprehensive Entity-Relationship (ER) diagrams, ensuring a coherent database structure while providing in-depth documentation of database design and user flows. <br>
-                Adopted the Software Development Life Cycle (SDLC) methodology, emphasizing systematic, high-quality development phases. <br>
-                Collaborated effectively using Git for version control, streamlining teamwork and ensuring consistent code quality. <br>
-            
-            </p>
-            <img src="hardware.jpg" alt="Hardware Rental Store App" class="image-class"> <br>
-        </div>
-        <div>
-            <h3>Flight Reservation System</h3>
-            <p>
-                
-                Developed an object-oriented Flight Reservation System in Java, designed to enhance the user experience in managing travel plans. <br>
-                Enables users to effortlessly browse through a comprehensive list of available flights, providing transparency and choice in travel arrangements. <br>
-                Empowers travelers with the ability to book and secure their preferred seats, as well as offering the flexibility to cancel reservations as their plans evolve. <br>
-                Offers a detailed graphical representation of the aircraft's seating configuration, allowing users to visualize and select their desired seats based on layout and availability.<br>
-            
-            </p>
-            <img src="flight.jpg" alt="Flight Reservation System" class="image-class"> <br>
-        </div>
-        <!-- More projects can be listed here -->
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div>
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p>
-                Toronto Metropolitan University, Expected Graduation: May 2025
-            
-            </p>
-            <img src="education.jpg" alt="Education" class="image-class"> <br>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you are interested in collaborating or have a project in mind, feel free to reach out to me. I am always open to discussing new ideas and opportunities in the field of software engineering.</p>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required> <br>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2023 Dibbyo Saha. All rights reserved.</p>
-    </footer>
-    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
