@@ -1,5 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
 
+@media (max-width: 768px) {
+
+    /* Adjust content-box width */
+    .content-box {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /* Make text fit properly */
+    .text-box h1 {
+        font-size: 3.2rem;
+        /* Reduce heading size */
+    }
+
+    .text-box p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    /* Centering contact form */
+    .contact-form-container {
+        width: 100%;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 95%;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    /* Adjust buttons for mobile */
+    .btn {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    /* Fix social icons layout */
+    .icon-box {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Adjust image size */
+    .img {
+        width: 70%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Fix navbar spacing */
+    header {
+        padding: 2rem 3rem;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 10px 0;
+        font-size: 1.6rem;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
