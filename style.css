@@ -334,44 +334,75 @@ header nav .active {
     opacity: 0;
 }
 
-/* Contact Form Styles */
-.contact-form {
+.contact-section {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 1);
+    /* Fully visible background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    /* Subtle glow effect */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Title */
+.contact-title {
+    font-size: 2.4rem;
+    color: var(--blue-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Input Styling */
 .contact-form label {
-    margin-bottom: 5px;
+    font-size: 1.4rem;
     color: var(--text-color);
+    margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    color: var(--text-color);
     width: 100%;
-}
-
-.contact-form button {
-    padding: 10px;
-    border: none;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--blue-color);
     border-radius: 5px;
-    background-color: var(--text-color);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #fff;
+    /* White background for visibility */
+    color: #000;
+    /* Black text */
+    font-size: 1.4rem;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+/* Placeholder Text Visibility */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #666;
+    /* Light gray */
+}
+
+/* Highlight Field on Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0077b5;
+    background-color: #fff;
+    color: #000;
+    outline: none;
 }

@@ -10,6 +10,17 @@ if (skillsElement) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const downloadBtn = document.querySelector(".btn");
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "saha_dibbyo_resume.pdf"; // Ensure the resume file is correctly referenced
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const isWorkExperiencesPage = window.location.pathname.includes("work-experiences.html");
     const isProjectsPage = window.location.pathname.includes("projects.html");
 
@@ -65,5 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Show only the default project section initially
         showProjectSection('mccss');
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const isContactPage = window.location.pathname.includes("contact.html");
+
+    if (isContactPage) {
+        emailjs.init("your_publicKey"); // Replace with your actual EmailJS public key
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("your_serviceID", "your_templateID", this)
+                .then(response => {
+                    alert("Message sent successfully!");
+                    document.getElementById("contact-form").reset(); // Reset form after submission
+                }, error => {
+                    alert("Failed to send message. Please try again.");
+                });
+        });
     }
 });
